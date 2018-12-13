@@ -1,4 +1,3 @@
-# Getting started with Python on Google Cloud Platform
 # Python Web App
 # DONT COMMIT TO MASTER !!!!!!
 
