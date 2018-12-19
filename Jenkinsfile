@@ -67,7 +67,7 @@ pipeline {
       }
       steps {
         input 'Do you want to deploy this to GCP?'
-        sh '''gcloud compute instances create-with-container ${instanceName} \\
+        sh '''gcloud compute instances create-with-container ${instanceName}-${BUILD_NUMBER} \\
             --container-image ${dockerImage}:Build-$BUILD_NUMBER \\
             --network upo \\
             --machine-type f1-micro \\
@@ -84,6 +84,6 @@ pipeline {
   }
   environment {
     dockerImage = 'eu.gcr.io/upodroid/foozoo'
-    instanceName = 'foozoo-build-${BUILD_NUMBER}'
+    instanceName = 'foozoo-build'
   }
 }
