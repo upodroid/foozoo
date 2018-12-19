@@ -21,14 +21,14 @@ pipeline {
             #!/bin/bash
             pwd
             ls -alh
-            sleep 10
+            sleep 20
             sudo apt update
             sudo apt install -y python-dev build-essential python3-pip python-pip
             sudo pip3 install virtualenv'''
         sleep 10
         
         
-        withPythonEnv('python') {
+        withPythonEnv('python3') {
             // Uses the default system installation of Python
             // Equivalent to withPythonEnv('/usr/bin/python')
             sh '''
