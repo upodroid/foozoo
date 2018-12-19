@@ -92,11 +92,11 @@ pipeline {
         cleanWs(cleanWhenAborted: true, cleanWhenFailure: true, cleanWhenNotBuilt: true, cleanWhenSuccess: true, cleanWhenUnstable: true)
       }
     }
+  }
 
-    post {
+  post {
         always {
             junit 'build/reports/**/*.xml'
         }
     }
-  }
 }
