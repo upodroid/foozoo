@@ -47,8 +47,8 @@ pipeline {
         sh '''# Pack docker image
             docker ps
             ls -alh
-            /snap/bin/gsutil cp gs://upo-scripts/docker/gcr.json .
-            cat gcr.json | docker login -u _json_key --password-stdin https://eu.gcr.io
+            /snap/bin/gsutil cp gs://upo-scripts/gcs.json .
+            cat gcs.json | docker login -u _json_key --password-stdin https://eu.gcr.io
             ls -alh
             docker build -t ${dockerImage}:Build-$BUILD_NUMBER .
             echo
