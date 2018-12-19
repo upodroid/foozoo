@@ -47,14 +47,16 @@ pipeline {
         }
     }
       }
-    }
-
-    stage('Publish test results') {
+    
+     stage('Publish test results') {
       agent {
         node {
           label 'gcp-builder'
+          }
         }
-      junit '*.xml'
+      steps{
+        junit '*.xml'
+        }
       }
 
     stage('Dockerise') {
