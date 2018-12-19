@@ -21,7 +21,7 @@ pipeline {
             #!/bin/bash
             pwd
             ls -alh
-            sleep 20
+            sleep 60
             sudo apt update
             sudo apt install -y python-dev build-essential python3-pip python-pip
             sudo pip3 install virtualenv'''
