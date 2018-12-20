@@ -7,8 +7,8 @@ provider "google" {
 
 terraform {
   backend "gcs" {
-    bucket  = "upo-scripts"
-    prefix  = "terraform/foozoo"
+    bucket  = "terraform-dummy"
+    prefix  = "foozoo"
     credentials = "terraform.json"
   }
 }
