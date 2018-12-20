@@ -3,3 +3,6 @@ gcs.json
 __pycache__
 .vscode
 coverage.xml
+.terraform
+terraform.exe
+terraform.json
