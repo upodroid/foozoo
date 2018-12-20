@@ -14,4 +14,4 @@ terraform --version
 terraform init
 terraform refresh
 terraform plan
-terraform apply -var gcrimage=${dockerImage}:Build-${BUILD_NUMBER} -var instancename=python-web-build-${BUILD_NUMBER} --auto-approve
+terraform apply -var gcrimage=${dockerImage}:Build-${BUILD_NUMBER} -var instancename=foozo-build-${BUILD_NUMBER} --auto-approve
