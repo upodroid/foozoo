@@ -1,6 +1,6 @@
 #!/bin/bash
-dockerImage=eu.gcr.io/upodroid/python-server
 cd $WORKSPACE/terraform
+dockerImage=eu.gcr.io/upodroid/foozoo
 ## Init 
 sudo apt install unzip ruby-full -y
 wget https://releases.hashicorp.com/terraform/0.11.11/terraform_0.11.11_linux_amd64.zip
