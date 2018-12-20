@@ -3,7 +3,7 @@ dockerImage=eu.gcr.io/upodroid/python-server
 cd $WORKSPACE/terraform
 ## Init 
 sudo apt install unzip ruby-full -y
-wget https://releases.hashicorp.com/terraform/0.11.10/terraform_0.11.11_linux_amd64.zip
+wget https://releases.hashicorp.com/terraform/0.11.11/terraform_0.11.11_linux_amd64.zip
 unzip terr*.zip
 sudo mv terraform /usr/local/bin/
 sleep 5
