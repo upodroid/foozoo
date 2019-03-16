@@ -15,7 +15,7 @@ pipeline {
             ls -alh
             sleep 60
             sudo apt update
-            sudo apt install -y python-dev build-essential python3-pip python-pip
+            sudo apt install -y python-dev build-essential python3-pip python-pip make
             sudo pip3 install virtualenv'''
         sleep 10
         withPythonEnv(pythonInstallation: 'python3') {
@@ -77,7 +77,7 @@ pipeline {
             --zone europe-west2-b 
             echo \'Go to PORT 80 on this server\'
            '''
-        emailext(to: 'alimahamed1996@gmail.com', body: '${SCRIPT, template="groovy_html.template"} <br/> --LOG-BEGIN--<br/> <br/> <pre style=\'line-height: 22px; display: block; color: #333; font-family: Monaco,Menlo,Consolas,"Courier New",monospace; padding: 10.5px; margin: 0 0 11px; font-size: 13px; word-break: break-all; word-wrap: break-word; white-space: pre-wrap; background-color: #f5f5f5; border: 1px solid #ccc; border: 1px solid rgba(0,0,0,.15); -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px;\'> ${BUILD_LOG, maxLines=1000, escapeHtml=true} </pre> --LOG-END--', attachLog: true, subject: '$DEFAULT_SUBJECT', replyTo: '$DEFAULT_REPLYTO')
+        emailext(to: 'hi@upo.one', body: '${SCRIPT, template="groovy_html.template"} <br/> --LOG-BEGIN--<br/> <br/> <pre style=\'line-height: 22px; display: block; color: #333; font-family: Monaco,Menlo,Consolas,"Courier New",monospace; padding: 10.5px; margin: 0 0 11px; font-size: 13px; word-break: break-all; word-wrap: break-word; white-space: pre-wrap; background-color: #f5f5f5; border: 1px solid #ccc; border: 1px solid rgba(0,0,0,.15); -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px;\'> ${BUILD_LOG, maxLines=1000, escapeHtml=true} </pre> --LOG-END--', attachLog: true, subject: '$DEFAULT_SUBJECT', replyTo: '$DEFAULT_REPLYTO')
         cleanWs(cleanWhenAborted: true, cleanWhenFailure: true, cleanWhenNotBuilt: true, cleanWhenSuccess: true, cleanWhenUnstable: true)
       }
     }
