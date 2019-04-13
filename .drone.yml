@@ -2,12 +2,14 @@ kind: pipeline
 name: default
 
 steps:
-- name: frontend
-  image: node
+- name: python app
+  image: python:3
   commands:
-  - npm install
-  - npm test
-
+    - pip install --upgrade pip
+    - pip install -r requirements.txt
+    - pip install -r requirements-dev.txt
+    - pip install nose nosexcover pytest mock retrying
+    - python -m pytest --junitxml=coverage.xml
 - name: backend
   image: golang
   commands:
