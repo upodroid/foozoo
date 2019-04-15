@@ -9,9 +9,3 @@ steps:
     - pip install -r requirements.txt
     - pip install -r requirements-dev.txt
     - pip install nose nosexcover pytest mock retrying
-    - python -m pytest --junitxml=coverage.xml
-- name: backend
-  image: golang
-  commands:
-  - go build
-  - go test
