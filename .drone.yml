@@ -2,7 +2,7 @@ kind: pipeline
 name: default
  
 steps:
-- name: python app
+- name: python-app
   image: python:3
   commands:
     - pip install --upgrade pip
