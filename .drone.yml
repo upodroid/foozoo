@@ -1,6 +1,6 @@
 kind: pipeline
 name: default
-
+ 
 steps:
 - name: python app
   image: python:3
